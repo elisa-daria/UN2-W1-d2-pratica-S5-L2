@@ -253,7 +253,7 @@
     </div>
 
     <footer>
-      <p>Blog Epicode &copy;2021</p>
+      <p>Blog Epicode &copy;<span id="copyYear">2021</span></p>
       <address>
         Testata online di Mario Rossi, registrata con prot. n.213/2018 - via
         Luigi Einaudi 2 - Milano. P.IVA 00112233.
@@ -264,5 +264,19 @@
         >
       </address>
     </footer>
+    <script>
+      const getDate = document.getElementById("copyYear");
+      const now = new Date();
+      const alwaysOnTheRightTime = () => {
+        getDate.innerText = now.getFullYear();
+      };
+      alwaysOnTheRightTime();
+      const getNovità = document.getElementsByTagName("h2")[1];
+      console.log(getNovità);
+      const upNovità = (str) => {
+        getNovità.innerText = str.toUpperCase();
+      };
+      upNovità("novità");
+    </script>
   </body>
 </html>
